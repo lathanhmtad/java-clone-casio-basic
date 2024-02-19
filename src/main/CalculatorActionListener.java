@@ -24,6 +24,8 @@ public class CalculatorActionListener implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		String s = e.getActionCommand();
+		
+		//ui.inputTrackingField.setText(ui.inputTrackingField.getText() + (s.equals("=") ? "" : s));
 		ui.inputTrackingField.setText(ui.inputTrackingField.getText() + s);
 	
 		// if the value is a number
@@ -35,7 +37,7 @@ public class CalculatorActionListener implements ActionListener {
 				s1 += s;
 			}
 		
-			ui.textFieldInput.setText(s1 + operator + s2);
+//			ui.textFieldInput.setText(s1 + operator + s2);
 		} else if (s.equals("=")) {
 			// perform calculations
 			double result = this.calculator();
@@ -70,7 +72,7 @@ public class CalculatorActionListener implements ActionListener {
 			// place the operator
 			operator = s;
 			
-			ui.textFieldInput.setText(s1);
+//			ui.textFieldInput.setText(s1);
 		}
 	}
 

@@ -1,6 +1,7 @@
 package ui;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -29,6 +30,7 @@ public class CalculatorUI extends JFrame {
 		setBounds(100, 100, 400, 500);
 		setLayout(new BorderLayout());
 		
+		
 		JPanel jPanelTextFields = new JPanel();
 		jPanelTextFields.setLayout(new GridLayout(2, 1));
 		this.add(jPanelTextFields, "North");
@@ -40,6 +42,8 @@ public class CalculatorUI extends JFrame {
 		jPanelTextFields.add(inputTrackingField);
 		
 		textFieldInput = new JTextField("0");
+		textFieldInput.setBackground(Color.black);
+		textFieldInput.setForeground(Color.white);
 		textFieldInput.setFont(new Font("Arial", Font.BOLD, 20));
 		textFieldInput.setEditable(false); // set the read only property
 		textFieldInput.setPreferredSize(new Dimension(WIDTH, 60));
@@ -49,12 +53,15 @@ public class CalculatorUI extends JFrame {
 		// create panel containing calculation buttons
 		JPanel jPanel = new JPanel();
 		jPanel.setLayout(new GridLayout(5, 4));
+		
+		jPanel.setBackground(Color.yellow);
 
 		// list 16 buttons
 		String[] arr = { "7", "8", "9", "/", "4", "5", "6", "*", "1", "2", "3", "-", "0", ".", "=", "+", "C" };
 
 		for (int i = 0; i < arr.length; i++) {
 			JButton button = new JButton(arr[i]);
+			button.setBackground(Color.BLUE);
 			button.setFont(new Font("Arial", Font.PLAIN, 20));
 			jPanel.add(button);
 			button.addActionListener(actionListener);
