@@ -87,7 +87,8 @@ public class CalculatorActionListener implements ActionListener {
 		} else if (operator.equals("/")) {
 			result = Double.parseDouble(s1) / Double.parseDouble(s2);
 		}
-		DecimalFormat decimalFormat = new DecimalFormat("0.00");
-		return Double.parseDouble(decimalFormat.format(result));
+//		DecimalFormat decimalFormat = new DecimalFormat("0.00");
+//		return Double.parseDouble(decimalFormat.format(result));
+		return result;
 	}
 }
