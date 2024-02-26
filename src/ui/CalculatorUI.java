@@ -52,12 +52,17 @@ public class CalculatorUI extends JFrame {
 
 		// create panel containing calculation buttons
 		JPanel jPanel = new JPanel();
-		jPanel.setLayout(new GridLayout(5, 4));
+		jPanel.setLayout(new GridLayout(8, 4));
 		
 		jPanel.setBackground(Color.yellow);
 
 		// list 16 buttons
-		String[] arr = { "7", "8", "9", "/", "4", "5", "6", "*", "1", "2", "3", "-", "0", ".", "=", "+", "C" };
+		String[] arr = { "7", "8", "9", "<=",
+				"4", "5", "6", "/", 
+				 "1", "2", "3", "*",
+				 "0", ".", "-", "+", "%", "C", "\u221A", "sin", "cos", "tan", "!", "^", "e^", "="
+				, "log", "^2", "^3"
+		};
 
 		for (int i = 0; i < arr.length; i++) {
 			JButton button = new JButton(arr[i]);
